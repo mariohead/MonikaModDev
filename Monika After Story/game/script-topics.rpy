@@ -5575,6 +5575,21 @@ default persistent._mas_pm_have_fam_mess_better = None
 default persistent._mas_pm_no_talk_fam = None
 
 init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="monika_lovecraft",category=['literature'],prompt="Lovecraft",random=True))
+    #Conversation about H.P. Lovecraft
+label monika_lovecraft:
+    m 1b "Hey, [player], are you familiar with H.P. Lovecraft?"
+    m 3a "He was a writer famous for developing an unconventional subgenre of horror."
+    m 3b "His short stories and other writings often dwelled on the horror of the cosmos and the unknown."
+    m 3a "Although he never really was recognized during his lifetime, his work has garnered somewhat of a cult following."
+    m 1a "His more famous creations are things like Cthulu, but he created an entire Mythos surrounding his stories."
+    m 4b "I can't say I'm a big fan of horror, but his ideas have always fascinated me."
+    m 2a "I've always wondered what it was like to peer into such an imaginative mind like Lovecraft's."
+    m 2c "Although, I've read that he was very hateful of many groups such as women."
+    m 4n "With that in mind, I can't really say I would have loved to have met him!"
+    m 1a "I suppose we'll have to be content with the strangeness of the worlds he conceived."
+    
+init 5 python:
     addEvent(Event(persistent.event_database,eventlabel="monika_asks_family",category=['you'],prompt="[player]'s family",random=True))
 
 label monika_asks_family:
